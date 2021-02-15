@@ -13,7 +13,7 @@ class Rebenok{
 }
 public class Firma2 {
     public static void main(String[] args){
-        Scanner sc=new Scanner(System.in,"cp1251");
+        Scanner sc=new Scanner(System.in);
 
         System.out.println("Введите количество сотрудников => ");
         int kol=sc.nextInt();
@@ -59,9 +59,12 @@ public class Firma2 {
         System.out.println("\n Сотрудники фирмы: \n фам \t имя \t отч + \t должность \t Оклад");
         for (Sotrudnik s : sotr) {
             System.out.print(s.fam+ "\t"+s.im + "\t" + s.otch + "\t "+ s.doljnost);
-            System.out.println("\n Дети: ");
-            for (Rebenok r : s.reb)
-                System.out.println("\t\t\t"+ r.imR+ "\t\t"+ r.ageR);
+            if(s.kolDet!=0) {
+                System.out.println("\n Дети: ");
+                for (Rebenok r : s.reb) {
+                    System.out.println("\t\t\t" + r.imR + "\t\t" + r.ageR);
+                }
+            }
             System.out.println("");
         }
     }
