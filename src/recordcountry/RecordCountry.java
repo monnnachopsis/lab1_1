@@ -11,11 +11,11 @@ public class RecordCountry {
         Scanner sc=new Scanner(System.in);
 
         System.out.println("Введите количество стран=> ");
-        int n=sc.nextInt(); // количество стран
+        int n=sc.nextInt();
         Strana country[]=new Strana[n];
         System.out.println("Введите информацию о странах: ");
         for (int i = 0; i < country.length; i++) {
-            sc.nextLine(); // очистка буфера
+            sc.nextLine();
             country[i]=new Strana();
             System.out.print("Название "+(i+1)+"-й страны => ");
             country[i].name=sc.nextLine();
